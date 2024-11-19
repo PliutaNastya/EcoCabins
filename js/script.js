@@ -1,3 +1,4 @@
+// Burger menu
 function menuInit() {
 	if (document.querySelector(".icon-menu")) {
 		document.addEventListener("click", function (e) {
@@ -13,19 +14,19 @@ function menuInit() {
 menuInit();
 
 
-
+// Header scroll
 window.addEventListener('scroll', function () {
-	const header = document.querySelector('.header'); // Замените '.header' на ваш селектор шапки
+	const header = document.querySelector('.header'); 
 	if (window.scrollY > 0) {
-		header.classList.add('scrolled'); // Добавляем класс, когда прокрутка начинается
+		header.classList.add('scrolled'); 
 	} else {
-		header.classList.remove('scrolled'); // Убираем класс, если прокрутка на нуле
+		header.classList.remove('scrolled');
 	}
 });
 
 
 
-
+// Video play
 function playVideo() {
 	const video = document.getElementById("video");
 	video.play();
@@ -45,6 +46,7 @@ document.querySelector(".hero__play-button").addEventListener("click", playVideo
 document.querySelector(".hero__pause-button").addEventListener("click", pauseVideo);
 
 
+// Slider
 document.addEventListener("DOMContentLoaded", function () {
 	const slider = document.querySelector('.materials__slider');
 	const slides = slider.querySelector('.slider__slides');
@@ -55,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	let touchStartX = 0;
 	let touchEndX = 0;
 
-	// Функция для обновления активного слайда и точек
 	function updateSlider() {
 		slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 
@@ -65,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 
-	// Функция для переключения слайда
 	function nextSlide() {
 		currentSlide = (currentSlide + 1) % slideCount;
 		updateSlider();
@@ -76,17 +76,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		updateSlider();
 	}
 
-	// Автопрокрутка слайдов
 	function startAutoplay() {
-		interval = setInterval(nextSlide, 3000); // 3 секунды
+		interval = setInterval(nextSlide, 5000);
 	}
 
-	// Остановка автопрокрутки
 	function stopAutoplay() {
 		clearInterval(interval);
 	}
 
-	// Переключение слайда по точке
 	dots.forEach(dot => {
 		dot.addEventListener('click', () => {
 			currentSlide = parseInt(dot.getAttribute('data-index'));
@@ -94,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 
-	// Обработчик событий для свайпа
 	slider.addEventListener('touchstart', (e) => {
 		touchStartX = e.changedTouches[0].screenX;
 	});
@@ -104,19 +100,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	slider.addEventListener('touchend', () => {
-		const swipeThreshold = 50; // Порог для распознавания свайпа
+		const swipeThreshold = 50; 
 		if (touchStartX - touchEndX > swipeThreshold) {
-			nextSlide(); // Свайп влево
+			nextSlide(); 
 		} else if (touchEndX - touchStartX > swipeThreshold) {
-			prevSlide(); // Свайп вправо
+			prevSlide(); 
 		}
 	});
 
-	// Инициализация слайдера
 	updateSlider();
 	startAutoplay();
 
-	// Запуск автопрокрутки на фокус
 	slider.addEventListener('mouseenter', stopAutoplay);
 	slider.addEventListener('mouseleave', startAutoplay);
 });

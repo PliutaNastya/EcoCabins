@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>EcoCabins</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="" class="header__logo">
+					<img src="img/logotype.svg" alt="Logotype">
+				</a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="" class="menu__link">Modellen</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Kopen</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Huren</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Nieuws</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__actions actions-header">
+					<a href="#" class="actions-header__button button">Contact</a>
+					<button type="button" class="actions-header__icon icon-menu"><span></span></button>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="main__hero hero">
+				<video  id="video" poster="img/hero/background.jpg" class="hero__video">
+					<source src="video/video.webm" type="video/webm">
+					Uw browser ondersteunt de videotag niet.
+				</video>
+				<div class="hero__container">
+					<div class="hero__body">
+						<div class="hero__content">
+							<div class="hero__label">Duurzame tiny huisjes</div>
+							<h1 class="hero__title">Een ecologisch tiny huisje is zoveel mogelijk opgebouwd uit duurzame natuurlijke materialen</h1>
+						</div>
+						<button class="hero__play-button" onclick="playVideo()">
+							<span class="hero__icon-play"><img src="img/hero/play_icon.svg" alt="Play"></span>
+							<span>Bekijk de film</span>
+						</button>
+						<button class="hero__pause-button">
+							<span class="hero__icon-pause"><img src="img/hero/pause_icon.svg" alt="Play"></span>
+							<span>Pauzeer de film</span>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="main__materials materials">
+				<div class="materials__container">
+					<div class="materials__content block-content">
+						<h2 class="block-content__title">Duurzame materialen</h2>
+						<div class="block-content__text">
+							<p>Alle EcoCabins hebben een hoge isolatiewaarde, worden geproduceerd met indien mogelijk duurzame en/of natuurlijke materialen en hebben als opvallende uiterlijke kenmerk de ‘ronde hoeken’, mogelijk gemaakt door het specifieke materiaalgebruik. De voordelen van bouwen met hout zijn legio: hout is licht, flexibel, isoleert goed en bouwt snel en efficiënt. </p>
+						</div>
+						<a href="#" class="button button--border">Lees meer</a>
+					</div>
+					<div class="materials__slider slider">
+						<div class="slider__slides slides">
+							<div class="slides__slide slide">
+								<img src="img/slider/slider_img_1.webp" alt="Image">
+							</div>
+							<div class="slides__slide slide">
+								<img src="img/slider/slider_img_2.webp" alt="Image">
+							</div>
+							<div class="slides__slide slide">
+								<img src="img/slider/slider_img_3.webp" alt="Image">
+							</div>
+							<div class="slides__slide slide">
+								<img src="img/slider/slider_img_4.webp" alt="Image">
+							</div>
+							<div class="slides__slide slide">
+								<img src="img/slider/slider_img_3.webp" alt="Image">
+							</div>
+						</div>
+						<div class="slider__dots dots">
+							<span class="dots__dot" data-index="0"></span>
+							<span class="dots__dot" data-index="1"></span>
+							<span class="dots__dot" data-index="2"></span>
+							<span class="dots__dot" data-index="3"></span>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>

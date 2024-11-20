@@ -13,6 +13,7 @@ function menuInit() {
 }
 menuInit();
 
+// ==========================================================================================================================================
 
 // Header scroll
 window.addEventListener('scroll', function () {
@@ -24,7 +25,7 @@ window.addEventListener('scroll', function () {
 	}
 });
 
-
+// ==========================================================================================================================================
 
 // Video play
 function playVideo() {
@@ -33,18 +34,24 @@ function playVideo() {
 	document.querySelector(".hero__play-button").style.display = "none";
 	document.querySelector(".hero__pause-button").style.display = "flex";
 }
-
 function pauseVideo() {
 	const video = document.getElementById("video");
 	video.pause();
 	document.querySelector(".hero__play-button").style.display = "flex";
 	document.querySelector(".hero__pause-button").style.display = "none";
 }
+function onVideoEnd() {
+	document.querySelector(".hero__play-button").style.display = "flex";
+	document.querySelector(".hero__pause-button").style.display = "none";
+}
 
-// Добавляем обработчики событий на кнопки
 document.querySelector(".hero__play-button").addEventListener("click", playVideo);
 document.querySelector(".hero__pause-button").addEventListener("click", pauseVideo);
 
+const video = document.getElementById("video");
+video.addEventListener("ended", onVideoEnd);
+
+// ==========================================================================================================================================
 
 // Slider
 document.addEventListener("DOMContentLoaded", function () {

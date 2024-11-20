@@ -578,6 +578,7 @@ body {
 	}
 	.footer__logo {
 		order: 1;
+		justify-self: center;
 	}
 	.footer__mail {
 		order: 2;

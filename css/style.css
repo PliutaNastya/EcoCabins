@@ -74,7 +74,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	inline-size: 100%;
 	z-index: 50; 
 	transition: all 0.3s ease;
 }
@@ -99,10 +99,10 @@ body {
 	display: flex;
 	align-items: center;
 	column-gap: 6px;
-	max-width: clamp(7.5rem, 2.941vw + 6.912rem, 8.438rem);
+	max-inline-size: clamp(7.5rem, 2.941vw + 6.912rem, 8.438rem);
 }
 .header__logo img {
-	width: 100%;
+	inline-size: 100%;
 }
 .header__menu {
 	margin-inline-start: auto;
@@ -121,7 +121,7 @@ body {
 .menu__link {
 	position: relative;
 	color: #FFF;
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.5;
 }
@@ -306,7 +306,7 @@ body {
 	align-items: center;
 	column-gap: 10px;
 	color: #FFF;
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 500;
 	transition: all 0.3s;
 }
@@ -527,7 +527,6 @@ body {
 }
 .advantages__text {
 	color: #646D70;
-	font-size: 12px;
 	font-weight: 400;
 	line-height: 1.9;
 }
@@ -561,10 +560,9 @@ body {
 }
 .footer__link, .footer__mail {
 	color: #FFF;
-	font-size: 12px;
 	font-weight: 500;
 	opacity: 0.7;
-	transition: all 0.3s;
+	transition: color 0.3s;
 }
 @media (any-hover: hover){
 	.footer__link:hover, .footer__mail:hover {
